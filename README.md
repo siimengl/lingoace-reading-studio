@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Chinese Reading Production Studio
 
-## Getting Started
+Portfolio prototype for an AI-assisted Chinese reading curriculum production workflow.
 
-First, run the development server:
+## What It Demonstrates
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Editable learner profile, instructional brief, and content guardrails
+- Reactive deterministic QA for vocabulary/character coverage, length, schema validity, and required sections
+- AI-assisted pre-review with explicit expert-judgment boundaries
+- Human expert review and version lifecycle
+- Illustrative pilot feedback and revision history
+- Model evaluation framework comparing candidate-output tradeoffs
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Workflow
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Brief & Guardrails → Draft & Quality Gate → Expert Review → Pilot & Version
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Product Decisions
 
-## Learn More
+- Deterministic checks remain separate from AI-assisted pedagogical evaluation
+- Human curriculum review retains final approval
+- QA reacts to course-package edits
+- Benchmark candidates demonstrate coverage, language-difficulty, and structural-reliability tradeoffs
+- Live AI generation is an experimental path; the complete illustrative workflow remains available independently
 
-To learn more about Next.js, take a look at the following resources:
+## Data & Provenance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Uses illustrative curriculum content only. No proprietary LingoAce curriculum or real student data is used.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js · React · TypeScript · Deterministic QA · Server-side AI API integration architecture
