@@ -37,13 +37,13 @@ export default function ModelBenchmark({ brief }: ModelBenchmarkProps) {
     <div className="space-y-5">
       <div>
         <h3 className="text-xs font-semibold text-gray-900 mb-2 uppercase tracking-wide">
-          Model Evaluation Framework
+          Sample Output Comparison
         </h3>
         <div className="inline-flex items-center gap-1.5 px-2 py-1 bg-blue-50 border border-blue-200 rounded mb-3">
-          <span className="text-xs font-medium text-blue-900">Illustrative benchmark</span>
+          <span className="text-xs font-medium text-blue-900">Illustrative examples</span>
         </div>
         <p className="text-xs text-gray-600 leading-relaxed mb-5">
-          Compare candidate outputs for Chinese curriculum production. Illustrative data only; no vendor performance claims.
+          Compare sample candidate outputs against the same editorial criteria. These are illustrative examples, not measured model benchmarks.
         </p>
       </div>
 
