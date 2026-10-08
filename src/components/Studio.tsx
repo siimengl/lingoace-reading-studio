@@ -173,17 +173,17 @@ export default function Studio() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <h1 className="text-base font-semibold text-gray-900">AI Chinese Reading Production Studio</h1>
-              <span className="px-2 py-0.5 text-xs font-medium text-gray-600 bg-gray-100 rounded">Portfolio Prototype</span>
-              <span className="text-xs text-gray-400">Illustrative Data</span>
+              <span className="px-2 py-0.5 text-xs font-medium text-gray-600 bg-gray-100 rounded">Interactive Sample</span>
+              <span className="text-xs text-gray-400">Sample Data</span>
             </div>
             <button
               onClick={() => setShowBenchmark(!showBenchmark)}
               className="text-xs text-gray-600 hover:text-gray-900 px-3 py-1.5 border border-gray-300 rounded hover:border-gray-400 transition-colors"
             >
-              Model Benchmark
+              Sample Output Comparison
             </button>
           </div>
-          <p className="text-[11px] text-gray-400 mt-1.5">Uses illustrative curriculum content only; no proprietary LingoAce content or real student data.</p>
+          <p className="text-[11px] text-gray-400 mt-1.5">Interactive sample built from fictional curriculum material. No company records or real student data.</p>
         </div>
       </header>
 
@@ -291,9 +291,9 @@ export default function Studio() {
                     }`}
                   >
                     <div className="flex flex-col items-center gap-0.5">
-                      <span>{isGenerating ? 'Generating…' : 'Try Live AI Generation'}</span>
+                      <span>{isGenerating ? 'Generating…' : 'Experimental Live Generation'}</span>
                       <span className={`text-xs font-normal ${canGenerate && !isGenerating ? 'text-gray-500' : 'text-gray-400'}`}>
-                        Experimental live path · up to 15 seconds
+                        Optional model endpoint · may be unavailable
                       </span>
                     </div>
                   </button>
