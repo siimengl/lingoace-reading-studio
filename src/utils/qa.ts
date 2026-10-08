@@ -87,7 +87,7 @@ export function computeAIReview(
   coursePackage: CoursePackage,
   qaResult: QAResult
 ): AIReviewResult {
-  // Gate AI pre-review if structural validation fails
+  // Rule-based illustrative screening; qualitative judgments require an editor.
   if (!qaResult.schemaValid || !qaResult.requiredSectionsComplete) {
     return {
       readingLevelFit: 'Not evaluated',
@@ -101,7 +101,7 @@ export function computeAIReview(
 
   const issues: string[] = [];
 
-  // Check for "迫不及待" specifically
+  // Known difficulty term flag for the sample lesson.
   if (coursePackage.readingPassage.includes('迫不及待')) {
     issues.push('"迫不及待" may exceed the selected reading profile.');
   }
@@ -109,11 +109,11 @@ export function computeAIReview(
   return {
     readingLevelFit: profile.readingLevel === 'Emerging' && issues.length > 0
       ? 'Requires adjustment'
-      : 'Appropriate',
-    instructionalAlignment: 'Aligned',
-    questionQuality: 'Good',
-    ageAppropriateness: 'Appropriate',
-    culturalNaturalness: 'Natural',
+      : 'No rule-based flag',
+    instructionalAlignment: 'Editor review',
+    questionQuality: 'Editor review',
+    ageAppropriateness: 'Editor review',
+    culturalNaturalness: 'Editor review',
     issues,
   };
 }
