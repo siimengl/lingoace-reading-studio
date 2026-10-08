@@ -6,7 +6,7 @@ Portfolio prototype for an AI-assisted Chinese reading curriculum production wor
 
 - Editable learner profile, instructional brief, and content guardrails
 - Reactive deterministic QA for vocabulary/character coverage, length, schema validity, and required sections
-- AI-assisted pre-review with explicit expert-judgment boundaries
+- Rule-based illustrative screening with clear editor-judgment boundaries
 - Human expert review and version lifecycle
 - Illustrative pilot feedback and revision history
 - Model evaluation framework comparing candidate-output tradeoffs
@@ -17,7 +17,7 @@ Brief & Guardrails → Draft & Quality Gate → Expert Review → Pilot & Versio
 
 ## Key Product Decisions
 
-- Deterministic checks remain separate from AI-assisted pedagogical evaluation
+- Deterministic checks are distinct from illustrative screening and human pedagogical review
 - Human curriculum review retains final approval
 - QA reacts to course-package edits
 - Benchmark candidates demonstrate coverage, language-difficulty, and structural-reliability tradeoffs
@@ -25,7 +25,7 @@ Brief & Guardrails → Draft & Quality Gate → Expert Review → Pilot & Versio
 
 ## Data & Provenance
 
-Uses illustrative curriculum content only. No proprietary LingoAce curriculum or real student data is used.
+Uses fictional curriculum material. No company records or real student data are included.
 
 ## Tech
 
