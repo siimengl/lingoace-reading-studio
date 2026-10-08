@@ -49,7 +49,7 @@ function extractJSON(text: string): string | null {
 function buildSystemPrompt(): string {
   return `You are a Chinese reading curriculum generator for overseas Chinese-heritage learners.
 
-Generate age-appropriate Chinese reading course packages following the provided learner profile and instructional brief. Respect oral vs literacy proficiency distinctions. This is portfolio/prototype content — do NOT claim proprietary LingoAce curriculum. Human experts retain final pedagogical approval.
+Generate age-appropriate Chinese reading course packages following the provided learner profile and instructional brief. Respect oral vs literacy proficiency distinctions. Use fictional demonstration content; make no claims about proprietary curricula or real student records. Human experts retain final pedagogical approval.
 
 Output ONLY a single JSON object matching this structure (no prose, no markdown, no code fences):
 
