@@ -17,7 +17,7 @@ export default function QAResultsView({ qaResult, aiReview }: QAResultsViewProps
   };
 
   const getRatingBadge = (rating: string) => {
-    if (rating === 'Not evaluated') {
+    if (rating === 'Not evaluated' || rating === 'Editor review' || rating === 'No rule-based flag') {
       return <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded">{rating}</span>;
     }
     if (rating === 'Strong' || rating === 'Appropriate') {
@@ -77,10 +77,11 @@ export default function QAResultsView({ qaResult, aiReview }: QAResultsViewProps
           </div>
 
           <div className="border-t border-gray-200 pt-4">
-            <div className="text-xs font-semibold text-gray-900 mb-3">AI-Assisted Pre-Review</div>
+            <div className="text-xs font-semibold text-gray-900 mb-1">Rule Screening & Editor Review</div>
+            <p className="text-[11px] text-gray-500 mb-3">Known-term flags are rule-based; lesson quality and cultural fit require an editor.</p>
             {aiReview.readingLevelFit === 'Not evaluated' ? (
               <div className="py-2.5 px-3 bg-gray-50 rounded border border-gray-200 text-xs text-gray-600">
-                Pre-review unavailable — complete required content and resolve structural errors first.
+                Screening unavailable — complete required content and resolve structural errors first.
               </div>
             ) : (
               <div className="space-y-2.5">
@@ -125,7 +126,7 @@ export default function QAResultsView({ qaResult, aiReview }: QAResultsViewProps
             <div className="py-2.5 px-3 bg-blue-50 border border-blue-200 rounded">
               <div className="text-xs font-semibold text-gray-900 mb-1.5">Expert Judgment Required</div>
               <div className="text-xs text-gray-700 leading-relaxed">
-                AI pre-review findings require validation by curriculum specialist before approval.
+                Rules flag possible issues; a curriculum editor makes the final qualitative judgment.
               </div>
             </div>
           </div>
